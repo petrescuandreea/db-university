@@ -1,0 +1,53 @@
+
+1. Selezionare tutti gli insegnanti
+
+SELECT `name`, `surname`
+FROM `teachers`;
+
+
+
+2. Selezionare tutti gli studenti il cui nome inizia per "E" (cercare operatori wildecard)
+
+SELECT `name`
+FROM `students` 
+WHERE `name` LIKE 'E%';
+
+
+
+3. Selezionare tutti gli studenti che si sono iscritti nel 2021
+
+SELECT `name` ,`surname`, `enrolment_date`
+FROM `students`
+WHERE `enrolment_date` LIKE '2021%';
+
+
+
+4. Selezionare tutti i corsi che non hanno un sito web (cercare operatore NULL/NOT NULL)
+
+SELECT `name`
+FROM `courses`
+WHERE `website` IS NULL;
+
+
+
+5. Selezionare tutti gli insegnanti che hanno un numero di telefono (cercare operatore NULL/NOT NULL)
+
+SELECT `name`, `surname`, `phone`
+FROM `teachers`
+WHERE `phone` IS NOT NULL;
+
+
+
+6. Selezionare tutti gli appelli d'esame dei mesi di giugno e luglio 2020
+
+SELECT *
+FROM `exams`
+WHERE `date` BETWEEN '2020-06-01' AND '2020-07-31'
+ORDER BY `date`;
+
+
+
+7. Qual è il numero totale degli studenti iscritti?
+
+SELECT COUNT(*) AS StudentsEnroled
+FROM `students`;
