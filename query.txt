@@ -45,6 +45,12 @@ FROM `exams`
 WHERE `date` BETWEEN '2020-06-01' AND '2020-07-31'
 ORDER BY `date`;
 
+SELECT *
+FROM `exams`
+WHERE `date` LIKE '2020-06%' 
+OR `date` LIKE '2020-07%'
+ORDER BY `date`;
+
 
 
 7. Qual è il numero totale degli studenti iscritti?
