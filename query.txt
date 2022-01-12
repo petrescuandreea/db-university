@@ -49,5 +49,5 @@ ORDER BY `date`;
 
 7. Qual è il numero totale degli studenti iscritti?
 
-SELECT COUNT(*) AS StudentsEnroled
+SELECT COUNT(id) AS StudentsEnroled
 FROM `students`;
